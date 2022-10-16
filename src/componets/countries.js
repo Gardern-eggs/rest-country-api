@@ -21,9 +21,17 @@ const Countries = () => {
     <>
         {countries.map((country)=>{
             //data requested to complete project
-            const { id }= country
+            const { numericCode,flag, name, population, region, capital, }= country
 
-            return<article key={id}> country</article>
+            return(
+            <article key={numericCode}> 
+                <img src={flag}/>
+                <h3> {name}</h3>
+                <h4>Population: {population}</h4>
+                <h4>Region: {region }</h4>
+                <h4>Capital:{capital}</h4>
+            </article>
+            )
            
         })}
     </>
