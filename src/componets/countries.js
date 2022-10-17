@@ -28,13 +28,16 @@ const Countries = () => {
                 return(
                 <article key={numericCode}> 
                     <div className='countryBox'>
-                        <img src={flag}/>
-                        
+                       <div className='img-container'>
+                            <img src={flag}/>
+                        </div>
                        <div className='countryBoxDetails'>
-                       <h2> {name}</h2>
+                       <h3> {name}</h3>
+                            
                             <h4>Population: <span>{population}</span></h4>
                             <h4>Region: <span>{region }</span></h4>
                             <h4>Capital: <span>{capital}</span></h4>
+                           
                        </div> 
                         
                     </div>
