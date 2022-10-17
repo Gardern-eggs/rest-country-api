@@ -22,12 +22,17 @@ body{
     padding-left:5%;
 }
 .headerContainer #modeSwitch{
+    display: flex;
+    align-content: center;
+    margin-right: 10px;
     padding-right: 8%;
+    font-weight: bolder;
 }
+/* end..... */
+
 
 /* filter bar */
 .filterbar{
-    border: 1px solid red;
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -36,6 +41,18 @@ body{
     margin-left:5%;
     height: 50px;
 }
+.filterbar #search{
+    border-radius: 5px;
+    height: 35px;
+    width: 500px;
+}
+.filterbar #select{
+    border-radius: 5px;
+    width: 200px;
+    height: 35px;
+}
+/* end.......... */
+
 
 /* countries design */
 .countryBox img{

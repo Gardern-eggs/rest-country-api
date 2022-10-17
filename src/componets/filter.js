@@ -7,7 +7,7 @@ export const Filter = () => {
             <input type="search" name="search" id="search" placeholder='Search for a country'/>
         </form>
         <select name='select' id='select'>
-            <option value='Filter by  region' ></option>
+            <option value='Filter by  region' >Filter By  Region</option>
             <option value='Filter by  region'>Africa</option>
             <option value='Filter by  region'>America</option>
             <option value='Filter by  region'>Asia</option>
