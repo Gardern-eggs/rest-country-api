@@ -16,14 +16,25 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
-    height:40px;
+    height:60px;
 }
 .headerContainer #question{  
     padding-left:5%;
 }
 .headerContainer #modeSwitch{
     padding-right: 8%;
+}
+
+/* filter bar */
+.filterbar{
+    border: 1px solid red;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-right: 8%;
+    margin-left:5%;
+    height: 50px;
 }
 
 /* countries design */
