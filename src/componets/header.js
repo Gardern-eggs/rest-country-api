@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="headerContainer">
         <div id='question'> 
-            <h3>Where in the world?</h3>
+            <h2>Where in the world?</h2>
         </div>
         <div id='modeSwitch'>
         <i className="fa-solid fa-moon-stars">🔌</i>
