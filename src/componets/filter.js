@@ -8,7 +8,7 @@ export const Filter = () => {
         </form>
         <div className='option'>
             <select name='select' id='select'>
-            <option value="" disabled selected hidden >Filter by Region</option>
+            <option value="" disabled defaultValue hidden >Filter by Region</option>
                 <option value='Africa'>Africa</option>
                 <option value='America'>America</option>
                 <option value='Asia'>Asia</option>

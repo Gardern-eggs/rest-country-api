@@ -39,7 +39,6 @@ const Countries = () => {
                             <h4>Capital: <span>{capital}</span></h4>
                            
                        </div> 
-                        
                     </div>
                 </article>
                 )
