@@ -24,7 +24,7 @@ const Country = () => {
     
       <div className='country'>
           <div className='btn-back'>
-            <Link to='/' className='btn'><i className='fa fa-arrow-left' > ・Back・</i></Link>
+            <Link to='/' className='btn'><i className='fa fa-arrow-left' > Back </i></Link>
           </div>
         {country.map((c)=>{
           

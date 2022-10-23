@@ -34,7 +34,7 @@ const Countries = () => {
                             <img src={flag}/>
                         </div>
                         </Link>
-                       <div className='countryBoxDetails'>
+                       <div className='countryBoxDetail'>
                        <h3> {name}</h3>
                             <h4>Capital: <span>{capital}</span></h4>
                             <h4>Population: <span>{population}</span></h4>

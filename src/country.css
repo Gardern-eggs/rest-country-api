@@ -22,7 +22,10 @@
 .btn-back .fa{
     justify-content: center;
 }
+ .btn i{
+    width: 70px;
 
+ }
 
 img{
     width: 100%;
@@ -64,19 +67,29 @@ margin-top:20px;
                 border-top-left-radius: 5px;
             }
         .countryBoxDetails{
+            padding: 10px;
+            margin-top: 10px;
             width: fit-content;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             margin-left: 5%;
 
         }
+        .countryBoxDetails h3{
+            margin: -5px 0 15px 0;
+        
+         }
         .countryBoxDetails h4{
-            font-weight: 600;
+            font-weight: bold;
+            padding-top: 5px;
             font-size: 	14px;
             letter-spacing: 1px;
         }
+        .countryBoxDetails span{
+            font-weight: lighter;
+        }
         .countryBoxDetails .otherDetails{
-            margin-top: 30px;
+            margin-top: 20%;
         }
         .borders .borderList{
             flex-wrap: nowrap;
