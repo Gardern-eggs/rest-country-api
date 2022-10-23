@@ -1,13 +1,9 @@
 import React from 'react'
 
-const Country = () => {
+export const Country = () => {
   return (
-    <>
-        <link typeof='/' className='btn btn-fade'>
-        <i className=''></i>Back Home    
-         </link>
-    <h1>country</h1>
-    </>
+      <>
+        <h1>country</h1>
+      </>
   )
 }
-export default Country

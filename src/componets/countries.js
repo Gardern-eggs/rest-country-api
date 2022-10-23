@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-
+import { Link } from 'react-router-dom';
 const url='https://restcountries.com/v2/all';
 const Countries = () => {
     const [countries,setCountries]= useState([])
@@ -28,16 +28,17 @@ const Countries = () => {
                 return(
                 <article key={numericCode}> 
                     <div className='countryBox'>
+                           <Link to={`/countries/${name}`}>
                        <div className='img-container'>
                             <img src={flag}/>
                         </div>
+                        </Link>
                        <div className='countryBoxDetails'>
                        <h3> {name}</h3>
-                            
+                            <h4>Capital: <span>{capital}</span></h4>
                             <h4>Population: <span>{population}</span></h4>
                             <h4>Region: <span>{region }</span></h4>
-                            <h4>Capital: <span>{capital}</span></h4>
-                           
+                            
                        </div> 
                     </div>
                 </article>
