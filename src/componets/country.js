@@ -1,6 +1,6 @@
 import React, {useState,useEffect}from 'react';
 import { Link, useParams} from 'react-router-dom';
-
+import '../country.css'
 const url= 'https://restcountries.com/v2/name/'
 const Country = () => {
   // to set country info state
@@ -21,10 +21,11 @@ const Country = () => {
     },[]) 
   return (
     <>
-    <div className='btn-back'>
-      <Link to='/' className='btn'><i className='fa fa-arrow-left' > Back</i></Link>
-    </div>
+    
       <div className='country'>
+          <div className='btn-back'>
+            <Link to='/' className='btn'><i className='fa fa-arrow-left' > ・Back・</i></Link>
+          </div>
         {country.map((c)=>{
           
           const {numericCode, flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders}=c
@@ -52,7 +53,14 @@ const Country = () => {
                       <h4>Languages: <span>{languages[0].name}</span></h4>
                   </div>
                   <div className='borders'>
-                    <h4>Border Countries: <span>{borders}</span></h4> 
+                    <h4>Border Countries: </h4> 
+                    <div className='borderList'>
+                      {borders.map((border)=>{
+                        return (
+                          <ul key={border}><li>{border}</li></ul>
+                        )
+                      })}
+                    </div>
                   </div>
                   
                       

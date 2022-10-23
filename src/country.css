@@ -1,21 +1,94 @@
+/* button styling */
+.country{
+    padding: 70px;
+}
+.country .countryBoxDetails .mainDetails{
+    margin: 30px 0;
+}
+.btn{
+    
+    color: aliceblue;
+    font-weight:bolder;
+    font-size: large;
+
+}
 .btn-back{
+    display: inline-block; 
+    outline: none;
+    border-radius: 5px;
+    background-color: hsla(209, 23%, 22%, 1);
+    margin-bottom: 20px;
+}
+.btn-back .fa{
+    justify-content: center;
+}
+
+
+img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+
+.borders{
+margin-top:20px;
+}
+
+.borders .borderList {
+    margin-top: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.borders li{
+    overflow: hidden;
+}
+.borders ul{
+    margin: 0 10PX;
+    background-color:  hsla(209, 23%, 22%, 1);
+    padding: 5px 10px;
+    border-radius: 3px;
+    box-shadow: 1px 0 2px rgb(18, 28, 37);
+}
+
+@media (min-width:600px){
+    .selectcountryBox{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        }
+       
+        .imgContainer img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+        .countryBoxDetails{
+            width: fit-content;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: 5%;
+
+        }
+        .countryBoxDetails h4{
+            font-weight: 600;
+            font-size: 	14px;
+            letter-spacing: 1px;
+        }
+        .countryBoxDetails .otherDetails{
+            margin-top: 30px;
+        }
+        .borders .borderList{
+            flex-wrap: nowrap;
+        }
+        .borders{
+        margin-top:2px;
+        }
+
+      
     
 }
-.selectcountryBox{
 
-}
-.imgContainer{
 
-}
-.countryBoxDetails{
 
-}
-.mainDetails{
 
-}
-.otherDetails{
-
-}
-.borders{
-
-}
