@@ -9,7 +9,8 @@ const Countries = () => {
             const response = await fetch(url)
             const countries = await response.json()
             setCountries(countries)
-            console.log(countries)
+            //to see elements been displayed on the dom
+            // console.log(countries)
         }
 //what to do with the fetched data
     useEffect(()=>{     
