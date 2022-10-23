@@ -40,8 +40,15 @@ body{
     font-weight: bolder;
 }
 /* end..... */
-
-
+/* button styling */
+.btn-back{
+    margin-top: 40px;
+    width:80px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: hsla(209, 23%, 22%, 1);;
+}
 /* filter bar */
 .filterbar{
     display: flex;
