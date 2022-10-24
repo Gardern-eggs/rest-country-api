@@ -12,9 +12,13 @@ const Countries = () => {
             //to see elements been displayed on the dom
             // console.log(countries)
         }
-//what to do with the fetched data
+//what to do with the fetched data and controll errors
     useEffect(()=>{     
+        try{
         fetchCountryData()       
+        }catch(error){
+            console.log(error)
+        }
     },[]
 )
 
