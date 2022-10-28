@@ -11,6 +11,7 @@ const Countries = () => {
             setCountries(countries)
             //to see elements been displayed on the dom
             // console.log(countries)
+            console.log(countries)
         }
 //what to do with the fetched data and controll errors
     useEffect(()=>{     
@@ -39,7 +40,7 @@ const Countries = () => {
                         </div>
                         </Link>
                        <div className='countryBoxDetail'>
-                       <h3> {name}</h3>
+                       <h3 className='countryName'> {name}</h3>
                             <h4>Capital: <span>{capital}</span></h4>
                             <h4>Population: <span>{population}</span></h4>
                             <h4>Region: <span>{region }</span></h4>
