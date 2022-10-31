@@ -36,7 +36,7 @@ const Countries = () => {
                     <div className='countryBox'>
                            <Link to={`/countries/${name}`}>
                        <div className='img-container'>
-                            <img src={flag}/>
+                            <img src={flag} alt='Country flag'/>
                         </div>
                         </Link>
                        <div className='countryBoxDetail'>
