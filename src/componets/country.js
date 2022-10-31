@@ -34,7 +34,7 @@ const Country = () => {
             <article key={numericCode}>
               <div className='selectcountryBox'>
                 <div className='imgContainer'>
-                  <img src={flag}/>
+                  <img src={flag} alt='country flag'/>
                 </div>     
                 <div className='countryBoxDetails'>
                  
