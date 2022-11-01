@@ -1,8 +1,9 @@
 import React from 'react'
 
 export const Filter = () => {
-  
-  const search=document.getElementById('search')
+   
+  const searchfilter=()=>{
+    const search=document.getElementById('search');
   search.addEventListener('input', (e)=>{
 
     const {value}=e.target
@@ -10,18 +11,19 @@ export const Filter = () => {
 
     countryName.forEach((name)=>{
       if(name.innerText.toLowerCase().includes(value.toLowerCase())){
-        name.parentElement.parentElement.style.display='block'
+        name.parentElement.style.display='block'
       }else{
         name.parentElement.parentElement.style.display='none'
       }
     })
   })
+}
 
 
   return (
     <div className='filterbar'>
         <form className='formControl'>
-            <input type="search" name="search" id="search" placeholder='Search for a country…' />
+            <input type="search" name="search" id="search" placeholder='Search for a country…' onChange={(e)=>searchfilter()}/>
         </form>
         <div className='option'>
             <select name='select' id='select'>
