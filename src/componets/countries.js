@@ -20,7 +20,7 @@ const Countries = () => {
         }catch(error){
             console.log(error)
         }
-    },[]
+    },[fetchCountryData[1]]
 )
 
   return (
