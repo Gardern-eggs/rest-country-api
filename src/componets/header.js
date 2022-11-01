@@ -1,4 +1,5 @@
 import React from 'react'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
 
 const Header = () => {
   return (
@@ -7,7 +8,8 @@ const Header = () => {
             <h2>Where in the world?</h2>
         </div>
         <div id='modeSwitch'>
-        <i className="fa fa-moon-o"> '  🌘 '</i>
+        <DarkModeIcon className="moon-o"/>
+       
            <h4>Dark Mode</h4>  
         </div>
     </header>
