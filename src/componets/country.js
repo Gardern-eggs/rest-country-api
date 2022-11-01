@@ -9,16 +9,15 @@ const Country = () => {
   //check country name and display that data
   const {name}=useParams()
   //fetch data from url{rest-name then join to the selected flag}
-  const fetchCountryData =async ()=>{
-    const response = await fetch( `${url}${name}`)
-    const country = await response.json()
-      setCountry(country)
-    
-    
-  }
+  
   useEffect(()=>{ 
+    const fetchCountryData =async ()=>{
+      const response = await fetch( `${url}${name}`)
+      const country = await response.json()
+        setCountry(country)
+    }
     fetchCountryData();
-    },[]) 
+    },[name]) 
   return (
     <>
     
@@ -28,13 +27,13 @@ const Country = () => {
           </div>
         {country.map((c)=>{
           
-          const {numericCode, flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders}=c
+          const {numericCode, flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders}=c;
 
           return(
             <article key={numericCode}>
               <div className='selectcountryBox'>
                 <div className='imgContainer'>
-                  <img src={flag} alt='country flag'/>
+                  <img src={flag} alt='country'/>
                 </div>     
                 <div className='countryBoxDetails'>
                  
