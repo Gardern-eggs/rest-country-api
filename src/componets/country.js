@@ -25,9 +25,8 @@ const Country = () => {
           <div className='btn-back'>
             <Link to='/' className='btn'><i className='fa fa-arrow-left' > Back </i></Link>
           </div>
-        {country.map((c)=>{
-          
-          const {numericCode, flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders}=c;
+        {country.map((c)=>{          
+          const {numericCode, flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders}=c
 
           return(
             <article key={numericCode}>
@@ -54,7 +53,7 @@ const Country = () => {
                   <div className='borders'>
                     <h4>Border Countries: </h4> 
                     <div className='borderList'>
-                      {borders.map((border)=>{
+                      {borders?.map((border)=>{
                         return (
                           <ul key={border}><li>{border}</li></ul>
                         )
