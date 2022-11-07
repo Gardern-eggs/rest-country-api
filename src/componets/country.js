@@ -53,6 +53,7 @@ const Country = () => {
                   <div className='borders'>
                     <h4>Border Countries: </h4> 
                     <div className='borderList'>
+                      {/* the borders?.map  checks if the country has borders or not before displaying */}
                       {borders?.map((border)=>{
                         return (
                           <ul key={border}><li>{border}</li></ul>
