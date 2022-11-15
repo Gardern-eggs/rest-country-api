@@ -1,11 +1,12 @@
 import React,{useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import { Filter } from './filter';
+
 const url='https://restcountries.com/v2/all';
 
 
 const Countries = () => {
     const [countries,setCountries]= useState([])
-
     //get data from url {rest-countries.v2}
     const fetchCountryData = async()=> {
             const response = await fetch(url)
@@ -26,17 +27,11 @@ const Countries = () => {
 )
 
 
-//   const searchfilter=async (value)=>{
-//     if(value!=''){
-//       const response=await fetch(`https://restcountries.com/v2/name/${value}`)
-//       const data=await response.json()
-//       if(data.length>0){
-//          setCountries(data)
-//       }
-//     }}
+
     
   return (
     <>
+      <Filter setCountries={setCountries} fetchCountryData={fetchCountryData}/>
         <div className='display'>
             {countries.map((country)=>{
     //data requested to complete project
