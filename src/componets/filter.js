@@ -1,4 +1,6 @@
 import React from 'react'
+import { Search } from '@mui/icons-material'
+
 
 export const Filter = ({setCountries,fetchCountryData}) => {
    
@@ -11,7 +13,7 @@ export const Filter = ({setCountries,fetchCountryData}) => {
           console.log(biibi)
         }
       }else{
-      fetchCountryData()
+   fetchCountryData()
       }
     }
 
@@ -35,7 +37,8 @@ export const Filter = ({setCountries,fetchCountryData}) => {
   return (
     <div className='filterbar'>
         <form className='formControl'>
-            <input type="search" name="search" id="search" placeholder='Search for a country…'  onChange={(e)=>searchData(e.target.value)}/>
+        <Search/>
+            <input type="search" name="search" id="search" placeholder='Search for a country…'  onChange={(e)=>searchData(e.target.value)} />
         </form>
         
         <div className='option'>

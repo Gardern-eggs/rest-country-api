@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import DarkMode from '@mui/icons-material/DarkMode'
 
-
 const Header = () => { 
   const [mode,setMode]=useState("light")
   const switchMode=()=>{
@@ -24,6 +23,7 @@ const Header = () => {
   return (
     <header className="headerContainer light-mode ">
         <div id='question'> 
+        
             <h2>Where in the world?</h2>
         </div>
         <div id='modeSwitch'onClick={switchMode}>
