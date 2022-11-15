@@ -1,33 +1,46 @@
 import React from 'react'
 
-export const Filter = () => {
+export const Filter = ({setCountries,fetchCountryData}) => {
    
-  const searchfilter=()=>{
-    const search=document.getElementById('search');
-  search.addEventListener('input', (e)=>{
-
-    const {value}=e.target
-    const countryName=document.querySelectorAll('.countryName')
-
-    countryName.forEach((name)=>{
-      if(name.innerText.toLowerCase().includes(value.toLowerCase())){
-        name.parentElement.style.display='block'
+    const searchData=async(data)=>{
+      if (data!==''){
+        const response=await fetch(`https://restcountries.com/v2/name/${data}`)
+        const biibi=await response.json();
+        if(biibi.length>0){
+          await setCountries(biibi)
+          console.log(biibi)
+        }
       }else{
-        name.parentElement.parentElement.style.display='none'
+      fetchCountryData()
       }
-    })
-  })
-}
+    }
+
+    const searchRegion=async(data)=>{
+      if (data!==''){
+        const response=await fetch(`https://restcountries.com/v2/region/${data}`)
+        const biibi=await response.json();
+        if(biibi.length>0){
+          await setCountries(biibi)
+     //     console.log(biibi)
+        }
+      }else{
+  fetchCountryData()
+      }
+    }
+  
+  
+
 
 
   return (
     <div className='filterbar'>
         <form className='formControl'>
-            <input type="search" name="search" id="search" placeholder='Search for a country…' onChange={(e)=>searchfilter()}/>
+            <input type="search" name="search" id="search" placeholder='Search for a country…'  onChange={(e)=>searchData(e.target.value)}/>
         </form>
+        
         <div className='option'>
-            <select name='select' id='select'>
-            <option value="" disabled defaultValue hidden >Filter by Region</option>
+            <select name='select' id='select' onChange={(e)=>searchRegion(e.target.value)}>
+            <option value=""defaultValue >Filter by Region </option>
                 <option value='Africa'>Africa</option>
                 <option value='America'>America</option>
                 <option value='Asia'>Asia</option>
@@ -35,6 +48,8 @@ export const Filter = () => {
                 <option value='Oceania'>Oceania</option>
             </select>
         </div>
+        
     </div>
+    
   )
 }
