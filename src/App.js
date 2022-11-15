@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Countries from './componets/countries';
 import Country from './componets/country';
-import { Filter } from './componets/filter';
 import Header from './componets/header';
 
 
@@ -14,7 +13,7 @@ function App() {
             <Header /> 
 
         <Route exact path='/'>
-          <Filter/>
+        
           <Countries />
         </Route>
         <Route path='/countries/:name'>
