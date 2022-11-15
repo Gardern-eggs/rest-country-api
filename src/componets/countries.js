@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 const url='https://restcountries.com/v2/all';
+
+
 const Countries = () => {
     const [countries,setCountries]= useState([])
 
@@ -23,6 +25,16 @@ const Countries = () => {
     },[]
 )
 
+
+//   const searchfilter=async (value)=>{
+//     if(value!=''){
+//       const response=await fetch(`https://restcountries.com/v2/name/${value}`)
+//       const data=await response.json()
+//       if(data.length>0){
+//          setCountries(data)
+//       }
+//     }}
+    
   return (
     <>
         <div className='display'>
@@ -33,7 +45,7 @@ const Countries = () => {
     //to display pulled data request
                 return(
                 <article key={numericCode}> 
-                    <div className='countryBox'>
+                    <div className='countryBox '>
                            <Link to={`/countries/${name}`}>
                        <div className='img-container'>
                             <img src={flag} alt='Country flag'/>

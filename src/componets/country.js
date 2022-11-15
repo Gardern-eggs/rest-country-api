@@ -1,6 +1,7 @@
 import React, {useState,useEffect}from 'react';
 import { Link, useParams} from 'react-router-dom';
 import '../country.css'
+
 const url= 'https://restcountries.com/v2/name/'
 const Country = () => {
   // to set country info state
@@ -18,9 +19,9 @@ const Country = () => {
     }
     fetchCountryData();
     },[name]) 
+    
   return (
     <>
-    
       <div className='country'>
           <div className='btn-back'>
             <Link to='/' className='btn'><i className='fa fa-arrow-left' > Back </i></Link>
@@ -53,11 +54,11 @@ const Country = () => {
                   <div className='borders'>
                     <h4>Border Countries: </h4> 
                     <div className='borderList'>
-                      {/* the borders?.map  checks if the country has borders or not before displaying */}
+                      {/* the borders?.map  checks if the country has borders or not before */}
                       {borders?.map((border)=>{
                         return (
                           <ul key={border}><li>{border}</li></ul>
-                        )
+                        )                        
                       })}
                     </div>
                   </div>
