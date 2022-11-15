@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+:root {
+    --primary: hsl(0, 0%, 100%);
+    --secondary: hsl(0, 0%, 98%);
+    --primary-text: hsl(200, 15%, 8%);
+    --darkmode-background: hsl(207, 26%, 17%);
+    --darkmode-text:hsl(0, 0%, 100%);
+    --darkmode-elements: hsl(209, 23%, 22%);
+    --primary-input: hsl(0, 0%, 52%);
+--primary-background: hsl(0, 0%, 98%);
+
+
+}
+
 *{
     padding: 0px;
     margin: 0px;
@@ -6,17 +19,18 @@
 }
 body{
     font-family: 'Nunito Sans','sans-serif';
-    background-color: hsl(207, 26%, 17%);
-    color:hsl(0, 0%, 100%)
+    background-color: var(--darkmode-background);
+    color:var(--primary)
 }
 .display{
     display: grid;
     grid-template-columns: 1fr;   
     gap:40px;
-    background-color: hsl(207, 26%, 17%);
+    background-color: var(--darkmode-background);
     border-radius: 5px;
     align-items: center;
     justify-items: center;
+    
 }
 
 /* header design */
@@ -181,4 +195,3 @@ body{
 
         }
 }
-
