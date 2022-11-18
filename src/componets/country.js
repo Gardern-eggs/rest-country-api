@@ -58,7 +58,7 @@ const Country = () => {
                       {borders?.map((border)=>{
                         return (
                           <ul key={border}><li>{border}</li></ul>
-                        )                        
+                        )                       
                       })}
                     </div>
                   </div>

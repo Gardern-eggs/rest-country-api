@@ -52,7 +52,15 @@ margin-top:20px;
     border-radius: 3px;
     box-shadow: 1px 0 2px rgb(18, 28, 37);
 }
-
+.countryBoxDetails h4{
+    font-weight: bold;
+    padding-top: 5px;
+    font-size: 	14px;
+    letter-spacing: 1px;
+}
+.countryBoxDetails span{
+    font-weight: lighter;
+}
 @media (min-width:600px){
     .selectcountryBox{
         display: grid;
@@ -79,15 +87,7 @@ margin-top:20px;
             margin: -5px 0 15px 0;
         
          }
-        .countryBoxDetails h4{
-            font-weight: bold;
-            padding-top: 5px;
-            font-size: 	14px;
-            letter-spacing: 1px;
-        }
-        .countryBoxDetails span{
-            font-weight: lighter;
-        }
+
         .countryBoxDetails .otherDetails{
             margin-top: 20%;
         }
