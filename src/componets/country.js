@@ -1,14 +1,34 @@
+
 import React, {useState,useEffect}from 'react';
 import { Link, useParams} from 'react-router-dom';
 import '../country.css'
 
+
+
 const url= 'https://restcountries.com/v2/name/'
-const Country = () => {
+const Country = (props) => {
   // to set country info state
   const [country,setCountry]= useState([])
-
-  //check country name and display that data
-  const {name}=useParams()
+  // const [borderName,setBorderName]=useState([])
+   //check country name and display that data
+   const {name}=useParams()
+  //   const fetchAlphacode=async(code)=>{
+  //     const response=await fetch(`https://restcountries.com/v2/alpha/#${code}`)
+  //     const data=await response.json()
+  //     setBorderName(prev=>[...prev,data])
+    
+  //   }
+    
+  //   const borderloop=(array)=>{
+  //     array.forEach(element => {
+  //       fetchAlphacode(element)
+  //     });
+  //   }
+    
+  //   useEffect(()=>{
+  //     borderloop(borders)
+  //   })
+ 
   //fetch data from url{rest-name then join to the selected flag}
   
   useEffect(()=>{ 
@@ -24,10 +44,11 @@ const Country = () => {
     <>
       <div className='country'>
           <div className='btn-back'>
-            <Link to='/' className='btn'><i className='fa fa-arrow-left' > Back </i></Link>
+            <Link to='/' ><i className='fa fa-arrow-left' > Back </i></Link>
           </div>
         {country.map((c)=>{          
           const {numericCode, flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders}=c
+         
 
           return(
             <article key={numericCode}>
@@ -55,10 +76,11 @@ const Country = () => {
                     <h4>Border Countries: </h4> 
                     <div className='borderList'>
                       {/* the borders?.map  checks if the country has borders or not before */}
+
                       {borders?.map((border)=>{
                         return (
                           <ul key={border}><li>{border}</li></ul>
-                        )                       
+                        )                      
                       })}
                     </div>
                   </div>

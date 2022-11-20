@@ -5,30 +5,34 @@
 .country .countryBoxDetails .mainDetails{
     margin: 30px 0;
 }
-.btn{
-    
-    color: aliceblue;
-    font-weight:bolder;
-    font-size: large;
 
-}
 .btn-back{
     display: inline-block; 
-    outline: none;
     border-radius: 5px;
-    background-color: hsla(209, 23%, 22%, 1);
-    margin-bottom: 20px;
+    box-shadow: ;
+    font-weight:bolder;
+    font-size: large;   
+    text-align: center;
+    margin-bottom: 80px;
+    width: 136px;
+    height: 40px;
+    justify-content: space-between;
+    box-shadow:  2px 2px 10px var(--border);
 }
+
 .btn-back .fa{
-    justify-content: center;
+    padding-top: 10px;
+    color:var(--primary-text);
+   
+
 }
- .btn i{
-    width: 70px;
 
- }
-
+.imgContainer{
+    width: 506px;
+    height: 403px;
+}
 img{
-    width: 100%;
+   
     border-radius: 4px;
 }
 
