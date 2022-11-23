@@ -44,15 +44,15 @@ const Country = (props) => {
     <>
       <div className='country'>
           <div className='btn-back'>
-            <Link to='/' ><i className='fa fa-arrow-left' > Back </i></Link>
+            <Link to='/' ><i className='fa fa-arrow-left' >  Back </i></Link>
           </div>
         {country.map((c)=>{          
           const {numericCode, flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders}=c
          
 
           return(
-            <article key={numericCode}>
-              <div className='selectcountryBox'>
+            // <article >
+              <div className='selectcountryBox'key={numericCode}>
                 <div className='imgContainer'>
                   <img src={flag} alt='country'/>
                 </div>     
@@ -79,7 +79,9 @@ const Country = (props) => {
 
                       {borders?.map((border)=>{
                         return (
+                          <Link to={`/countries/${border}`}>
                           <ul key={border}><li>{border}</li></ul>
+                          </Link>
                         )                      
                       })}
                     </div>
@@ -89,7 +91,7 @@ const Country = (props) => {
                   
                   </div>         
                </div>
-            </article>
+            // </article>
 
 
           )
