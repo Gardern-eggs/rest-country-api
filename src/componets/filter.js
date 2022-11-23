@@ -36,9 +36,9 @@ export const Filter = ({setCountries,fetchCountryData}) => {
   return (
     <div className='filterbar'>
         <form className='formControl'>
-        {/* <Search/> */}
+      <div className='search'>
         <i className="fa fa-search"> <input type="search" id="search" placeholder='Search for a country…'  onChange={(e)=>searchData(e.target.value)}  /></i>
-            
+        </div>
         </form>
         
         <div className='option'>
