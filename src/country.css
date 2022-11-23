@@ -40,16 +40,19 @@ img{
 
 .borders{
 margin-top:20px;
+
 }
 
 .borders .borderList {
     margin-top: 10px;
     display: inline-flex;
     flex-wrap: wrap;
+    
 }
 .borders li{
     overflow: hidden;
 }
+
 .borders ul{
     margin: 0 10PX;
     background-color:  hsla(209, 23%, 22%, 1);
@@ -78,14 +81,16 @@ margin-top:20px;
                 object-fit: cover;
                 border-top-right-radius: 5px;
                 border-top-left-radius: 5px;
+                margin-bottom: 44px;
             }
         .countryBoxDetails{
             padding: 10px;
             margin-top: 10px;
+            
             width: fit-content;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            margin-left: 5%;
+            margin-left: 12%;
 
         }
         .countryBoxDetails h3{
