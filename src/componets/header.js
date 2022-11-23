@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import DarkMode from '@mui/icons-material/DarkMode'
+import { rgbToHex } from '@mui/material'
 
 const Header = () => { 
   const [mode,setMode]=useState("light")
@@ -9,7 +10,7 @@ const Header = () => {
       document.documentElement.style.setProperty('--primary', 'hsl(207, 26%, 17%)');
       document.documentElement.style.setProperty('--secondary', ' hsl(209, 23%, 22%)');
       document.documentElement.style.setProperty('--primary-text', 'hsl(0, 0%, 100%)');
-      document.documentElement.style.setProperty('--border'," rgb(18, 28, 37)");
+      document.documentElement.style.setProperty('--border'," hsl(209, 30%, 18%)");
 
   }
   else {
@@ -17,7 +18,6 @@ const Header = () => {
       document.documentElement.style.setProperty('--secondary', ' hsl(0, 0%, 98%)');
       document.documentElement.style.setProperty('--primary-text', 'hsl(200, 15%, 8%)');
       document.documentElement.style.setProperty('--border'," rgb(198, 204, 206)");
-
       setMode('light');
   }
 }
