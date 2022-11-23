@@ -6,7 +6,7 @@ import '../country.css'
 
 
 const url= 'https://restcountries.com/v2/name/'
-const Country = (props) => {
+const Country = () => {
   // to set country info state
   const [country,setCountry]= useState([])
   // const [borderName,setBorderName]=useState([])
@@ -46,6 +46,7 @@ const Country = (props) => {
           <div className='btn-back'>
             <Link to='/' ><i className='fa fa-arrow-left' >  Back </i></Link>
           </div>
+          
         {country.map((c)=>{          
           const {numericCode, flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders}=c
          
@@ -77,18 +78,15 @@ const Country = (props) => {
                     <div className='borderList'>
                       {/* the borders?.map  checks if the country has borders or not before */}
 
-                      {borders?.map((border)=>{
-                        return (
+                      {
+                      borders?borders.map((border)=>(
                           <Link to={`/countries/${border}`}>
                           <ul key={border}><li>{border}</li></ul>
                           </Link>
-                        )                      
-                      })}
+                        )) :'Has no Borders'
+                        }
                     </div>
-                  </div>
-                  
-                      
-                  
+                  </div>        
                   </div>         
                </div>
             // </article>
