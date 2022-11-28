@@ -14,8 +14,10 @@
     text-align: center;
     margin-bottom: 80px;
     width: 104px;
+   border: 2px solid red;
+   
     height: 32px;
-    justify-content: space-between;
+    
     box-shadow:  2px 2px 10px var(--border);
 }
 
