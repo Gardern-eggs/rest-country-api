@@ -36,14 +36,16 @@ const Countries = (props) => {
         <div className='display'>
             {/* filter component to search for countries */}
             {countries
-            
+           // eslint-disable-next-line
             .filter((val)=>{
             if(search === ''){
                return val
+               
             }else if(val.name.toLowerCase().includes(search.toLocaleLowerCase())){
               return val
             }
                 }) 
+                //eslint-disable-next-line
         // filter to select regions
         .filter((val)=>{
             if(region === '' ){
