@@ -7,8 +7,7 @@ import '../country.css'
 const Country=(props)=> {
   const {name} = useParams()
 
-//use to change the theme
-let changes = props.change
+
 
 //all array from appjs
 let countries = props.arrayData;
@@ -18,7 +17,10 @@ let countryDetail = countries.filter(country => country.name === name)[0];
 const borders = (arr) => {
     return arr.map(code => {
        const borderCountry = countries.filter(country => country.alpha3Code === code)[0];
-        return <div className="borders" key={borderCountry.name}>{borderCountry.name}</div>
+        return <div className="borders" key={borderCountry.numericCode}>
+          <ul className='borderLists'>
+            <li>{borderCountry.name}</li>
+          </ul></div>
 
     })
 }
@@ -34,12 +36,13 @@ return(
           <i className="fa fa-arrow-left">Back</i>
         </Link>
 
-        <div className='selectcountryBox'>
+        <div className='selectcountryBox' key={countryDetail.name}>
                 <div className='imgContainer'>
                   <img src={countryDetail.flags.png} alt='flag'/>
                 </div>
                 <div className='countryBoxDetails'>
                   <div className='mainDetails'>
+                  
                     <h3>{name}</h3>
                       <h4>Native Name: <span>{countryDetail.nativeName}</span></h4>
                       <h4>Population: <span>{countryDetail.population}</span></h4>
@@ -62,6 +65,7 @@ return(
                   </div>       
             
                 </div>  
+              
         </div>
 
       </section>
