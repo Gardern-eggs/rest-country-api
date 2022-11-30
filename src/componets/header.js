@@ -7,8 +7,8 @@ const Header = () => {
   const switchMode=()=>{
     if (mode === 'light') {
       setMode('dark');
-      document.documentElement.style.setProperty('--primary', 'hsl(207, 26%, 17%)');
-      document.documentElement.style.setProperty('--secondary', ' hsl(209, 23%, 22%)');
+      document.documentElement.style.setProperty('--primary', 'rgba(32, 44, 54, 1)');
+      document.documentElement.style.setProperty('--secondary', 'rgba(43, 56, 68, 1)');
       document.documentElement.style.setProperty('--primary-text', 'hsl(0, 0%, 100%)');
       document.documentElement.style.setProperty('--border'," hsl(209, 30%, 18%)");
 
