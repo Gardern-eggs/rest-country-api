@@ -17,18 +17,16 @@ let countryDetail = countries.filter(country => country.name === name)[0];
 const borders = (arr) => {
     return arr.map(code => {
        const borderCountry = countries.filter(country => country.alpha3Code === code)[0];
-        return <div className="borders" key={borderCountry.numericCode}>
-          <ul className='borderLists'>
-            <li>{borderCountry.name}</li>
-          </ul></div>
+        return <li className="borders" key={borderCountry.numericCode}>   
+         {borderCountry.name}        
+          </li>
 
     })
 }
 
 let borderCountries = Object.keys(countryDetail).includes('borders') ? borders(countryDetail.borders) : `${name} is an Island`;
-
-//console.log(countryDetail.borders)
-
+//console.table(borderCountries)
+//console.log(borderCountries)
 return(
   <>
       <section className='country'>
@@ -41,6 +39,7 @@ return(
                   <img src={countryDetail.flags.png} alt='flag'/>
                 </div>
                 <div className='countryBoxDetails'>
+                  <div className='grid-control'>
                   <div className='mainDetails'>
                   
                     <h3>{name}</h3>
@@ -56,16 +55,15 @@ return(
                       <h4>Currency: <span>{countryDetail.currencies[0].name}</span></h4>
                       <h4>Languages: <span>{countryDetail.languages.map(lang => <span className="lang">{lang.name.toString()}</span>)}</span></h4>
                   </div>
-            
-                  <div className='borders'>
-                      <h4>Border Countries:</h4>
-                          <div className='borderList'>
-                              {borderCountries }     
-                          </div>
-                  </div>       
+                  </div>
+                  <div className='borderList'>
+                      <h4>Border Countries: <span>{borderCountries}</span> </h4>
+                       
+                  </div>  
+                
             
                 </div>  
-              
+                             
         </div>
 
       </section>
