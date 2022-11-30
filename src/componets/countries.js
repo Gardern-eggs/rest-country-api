@@ -35,7 +35,9 @@ const Countries = (props) => {
     {/* end of filter component */}
         <div className='display'>
             {/* filter component to search for countries */}
-            {countries.filter((val)=>{
+            {countries
+            
+            .filter((val)=>{
             if(search === ''){
                return val
             }else if(val.name.toLowerCase().includes(search.toLocaleLowerCase())){
